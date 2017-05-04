@@ -1,2 +1,14 @@
 # Four-Bar-Linkage-Problem-Solver
 Solves four bar linkage problems given some user inputs
+
+The goal of this project was to create a MATLAB program that would solve four bar linkage problems. This program will ask the user for the lengths of the three bars, two angles, the horizontal and vertical distance between the two bars touching the ground, and the angular velocity of the first angle. Using these user inputs, the program will calculate the velocity and acceleration of the two points of the four bar linkage that are moving, in vector form, as well as the rate of change of theta 1, 2, and 3 over time. In addition to calculating all these values, the program will also graph the four bar linkage, allowing the user to have a visual interpretation of the problem if they are not given one already. 
+When writing the code for our project, we used what we learned in class about four bar linkages and some online readings to aid us in the creation of our program. The equations listed below were very essential in the process of writing our code
+
+
+
+Knowing that we already had all the variables listed above from user input except for theta 3, we used these equations to solve for theta 3. 
+We used the equations e ̂'_R=cosθ_1 i+sinθ_1 j and e ̂'_θ=-sinθ_1 i+cosθ_1 j to find the vectors for e ̂'_R and e ̂'_θ for the 3 different legs. 
+In order to find the velocity at point B, we used the equation (v_B ) ̅=l_1 θ ̇_1 (e') ̂_θ. Since we already had all the values for these variables, this was fairly easy to find. As for the velocity at point C, we used the equation (v_c ) ̅=l_2 θ ̇_2 (e'') ̂_θ+l_1 θ ̇_1 (e') ̂_θ .Since θ ̇_2 was unknown, we set the i and j components equal to one another to solve for θ ̇_2 and then plugged it back in to solve for the velocity at point C.
+In order to find the acceleration at point B, we used the equation a ̅_B=-l_1 θ ̇_1^2 e ̂_R^'. Since we already had all the values for these variables again, this was easy to find. As for the acceleration at point c, we used the equation a ̅_c=-l_3 θ ̇_3^2 e ̂_R^'''+l_3 θ ̈_3 e ̂_θ^'''. Again, we set the I and j components equal to each other in order to solve for the unknowns and eventually, the acceleration at point C. 
+As mentioned before, in addition to calculating the velocities and accelerations, we also graphed what the four bar linkage would look like, with appropriate labels for all the variables. This would provide the user with a picture to go along with the problem so that the numbers that are calculated have some meaning.
+Overall, this project helped us further our understanding of four bar linkage problems and really solidified what we learned in class about four bar linkages. Not only did we create a tool for students to check their answers with, but we gained a lot of knowledge about both solving four bar linkage problems and programming in MATLAB.  
